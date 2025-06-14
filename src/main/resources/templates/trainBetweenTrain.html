@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Trains System</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div th:replace="userHeader :: userHeader"></div>
+
+    <div class="main">
+        <p class="menu">Check Train</p>
+    </div>
+
+<form class="tab" th:action="@{/searchbetweentrain}" method="get">
+        <br /> From  Train: <input type="text" name="fromtrain" /><br />
+        <br /> To Train: <input type="text"  name="totrain" /><br />
+        <br /> <input type="submit" value="Search Train">
+</form>
+
+<div th:if="${trains}">
+    <h3>Trains Found:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Train No</th>
+                <th>Train Name</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Seats</th>
+                <th>Fare</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="train : ${trains}">
+                <td th:text="${train.tr_no}"></td>
+                <td th:text="${train.tr_name}"></td>
+                <td th:text="${train.from_stn}"></td>
+                <td th:text="${train.to_stn}"></td>
+                <td th:text="${train.seats}"></td>
+                <td th:text="${train.fare}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

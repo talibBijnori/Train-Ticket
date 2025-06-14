@@ -1,0 +1,44 @@
+
+<div th:fragment="userHeader">
+
+    <header>
+        <h1 class="hd">National Ticket Booking Spot</h1>
+        <div>
+            <h3>
+                <div class="alert alert-primary" role="alert" th:text="${success}" th:if="${success}"></div>
+                <div class="alert alert-danger" role="alert" th:text="${error}" th:if="${error}"></div>
+            </h3>
+        </div>
+        
+        <div class="home">
+            <p class="menu">
+                <a href="/">Home</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu">
+                <a href="userviewtrain">View Trains</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu">
+                <a href="trainbwstn">Trains Between Stations</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu">
+                <a href="adminsearchtrain">Search By TrainNo</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu">
+                <a href="userprofile">Profile</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu">
+                <a href="userlogout">Logout</a>
+            </p>
+        </div>
+    </header>
+</div>

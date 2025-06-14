@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Trains System</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div th:replace="adminHeader :: adminHeader"></div>
+
+    <div class="main">
+        <p class="menu">Add Train</p>
+    </div>
+
+    <div th:if="${train}" style="position: absolute; left: 50%;">
+        <h2>Train Details</h2>
+        <p>Train No: <span th:text="${train.tr_no}"></span></p>
+        <p>Train Name: <span th:text="${train.tr_name}"></span></p>
+        <p>From: <span th:text="${train.from_stn}"></span></p>
+        <p>To: <span th:text="${train.to_stn}"></span></p>
+        <p>Seats: <span th:text="${train.seats}"></span></p>
+        <p>Fare: <span th:text="${train.fare}"></span></p>
+    </div>
+    <div th:if="${error}">
+        <p th:text="${error}" style="color: red;"></p>
+    </div>
+</body>
+
+</html>

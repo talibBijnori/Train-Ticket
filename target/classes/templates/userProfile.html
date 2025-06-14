@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Trains System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>User Profile</h2>
+
+    <div>
+        <p><strong>Name:</strong> <span th:text="${user.name}"></span></p>
+        <p><strong>Email:</strong> <span th:text="${user.email}"></span></p>
+        <!-- Add more fields if needed -->
+    </div>
+
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

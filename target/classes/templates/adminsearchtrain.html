@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Trains System</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        form {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            padding: 5px;
+            background-color: cornflowerblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div th:replace="adminHeader :: adminHeader"></div>
+
+    <div class="main">
+        <p class="menu">Search Train</p>
+    </div>
+
+    <form action="/adminsearchtrain" method="get">
+        <label for="trainNo" style="margin-left: 20px;">Train No:</label>
+        <input type="text" id="trainNo" name="trainNo" />
+        <input type="submit" value="Search" />
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Trains System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Settings</h1>
+    <div class="alert alert-primary" role="alert" th:text="${success}" th:if="${success}"></div>
+    <div class="alert alert-danger" role="alert" th:text="${error}" th:if="${error}"></div>
+    <!-- <div th:insert="header :: Header">...</div> -->
+    <div class="main">
+			<span class="menu">
+				<a href="userLogin">Login as User</a>
+			</span>
+			<span class="menu">
+				<a href="UserRegister">New User Register</a>
+			</span>
+			<span class="menu">
+				<a href="adminLogin">Login as Admin</a>
+			</span>
+		</div>
+    <div class="tab green">User Login</div>
+    <form action="userLogin" class="tab brown" method="post">
+        <br /> Email: <input type="text" name="email" placeholder="Enter Email"> <br /> <br /> Password: <input
+            placeholder="Enter password" type="password" name="password"> <br /> <br /> <input type="submit"
+            value=" LOGIN "><br />
+
+    </form>
+    <br />
+    <footer>
+        <address id="cent">
+            Developed By: Talib Ansari <br />
+            Email: talibansaritts@gmail.com
+        </address>
+    </footer>
+</body>
+
+</html>

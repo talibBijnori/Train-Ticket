@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Trains System</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div th:replace="adminHeader :: adminHeader"></div>
+
+    <div class="main">
+        <p class="menu">Add Train</p>
+    </div>
+
+<form class="tab" th:action="@{/updateTrain}" method="post" th:object="${train}">
+        <input type="hidden" name="id" th:value="${train.id}" />
+
+        <br /> Train Number: <input type="text" th:field="*{tr_no}" /><br />
+        <p th:if="${#fields.hasErrors('tr_no')}" th:errors="*{tr_no}"></p>
+
+        <br /> Train Name: <input type="text" th:field="*{tr_name}" /><br />
+        <p th:if="${#fields.hasErrors('tr_name')}" th:errors="*{tr_name}"></p>
+
+        <br /> From Station: <input type="text" th:field="*{from_stn}" /><br />
+        <br /> To Station: <input type="text" th:field="*{to_stn}" /><br />
+        <br /> Available Seats: <input type="text" th:field="*{seats}" /><br />
+        <br /> Fare (INR): <input type="text" th:field="*{fare}" /><br />
+
+        <br /> <input type="submit" value="ADD TRAIN">
+    </form>
+</body>
+</html>
