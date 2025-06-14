@@ -1,11 +1,10 @@
+com\example\helloword\HellowordApplication.class
+com\example\helloword\repository\UserRepository.class
+com\example\helloword\model\Train.class
+com\example\helloword\controller\TrainController.class
 com\example\helloword\model\Admin.class
 com\example\helloword\repository\AdminRepository.class
 com\example\helloword\repository\TrainRepository.class
 com\example\helloword\model\User.class
-com\example\helloword\HellowordApplication.class
 com\example\helloword\controller\UserController.class
 com\example\helloword\controller\HomeController.class
-com\example\helloword\repository\UserRepository.class
-com\example\helloword\model\Train.class
-com\example\helloword\controller\TrainController.class
-com\example\helloword\controller\DashboardController.class
